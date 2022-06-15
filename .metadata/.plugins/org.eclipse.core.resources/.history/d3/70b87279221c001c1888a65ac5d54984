@@ -1,0 +1,42 @@
+package clazz.constructor;
+
+
+class Car2{
+	
+
+	//필드
+	String company = "현대자동차";
+	String model;
+	String color;
+	int maxSpeed;
+	
+	//기본생성자
+	public Car2() {}
+	
+	// 생성자 오버로딩
+	public Car2(String model, String color) {
+		this.model = model;
+		this.color = color;
+	}
+	// 생성자 오버로딩 2
+	public Car2(String model, String color, int maxSpeed) {
+		this.model = model;
+		this.color = color;
+		this.maxSpeed = maxSpeed;
+
+	}
+	
+}
+
+
+
+public class EX02 {
+
+	public static void main(String[] args) {
+
+		Car2 car = new Car2();
+		System.out.println("제작회사 : "  + car.company);
+		
+	}
+
+}

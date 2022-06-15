@@ -1,0 +1,16 @@
+package api;
+
+import java.util.Arrays;
+
+public class EX06 {
+
+	public static void main(String[] args) {
+
+		int[] arr = {1, 2, 3, 4, 5};
+		System.out.println(Arrays.toString(arr));
+		//Arrays 클래스는 배열을 쓰는데 있어서 편리한 기능을 제공해주는 클래스
+		//Math 클래스와 마찬가지로 static 메소드들롤 클래스로 편하게 접근이 가능하다/
+		
+	}
+
+}

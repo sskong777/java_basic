@@ -1,0 +1,34 @@
+package io;
+
+import java.io.*;
+
+class SungJuk implements Serializable{
+	
+	String name = "홍길동";
+	int java = 100;
+}
+public class EX10 {
+
+	public static void main(String[] args) throws Exception {
+
+		File dir = new File("C:" + File.separator + "aaa");
+		File file = new File(dir,"aaa.txt");
+		
+		FileOutputStream fos =  new FileOutputStream(file);
+		
+		BufferedOutputStream bos = new BufferedOutputStream(fos);
+		
+		ObjectOutputStream oos = new ObjectOutputStream(bos);
+		
+		SungJuk sj =  new SungJuk();
+		
+		oos.writeObject(sj);
+		
+		
+		oos.close();
+		bos.close();
+		fos.close();
+
+	}
+
+}

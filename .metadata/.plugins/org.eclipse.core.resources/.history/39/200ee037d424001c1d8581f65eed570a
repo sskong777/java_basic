@@ -1,0 +1,24 @@
+package expression;
+
+import java.util.regex.Pattern;
+
+public class EX04 {
+
+	public static void main(String[] args) {
+
+		String firstName = "Hong";
+		String lastName = "Gil-Dong";
+		String koreanName ="홍길동213";
+		
+		boolean firstCheck = Pattern.matches("^[A-Z][a-zA-z]*$", firstName);
+		boolean lastCheck = Pattern.matches("^[a-zA-z]+(['-][a-zA-Z]+)*$", lastName);
+		boolean koreaCheck = Pattern.matches("[가-힣]*", koreanName);
+	
+	
+		System.out.println("firstName : "  + firstCheck);
+		System.out.println("lastName : "  + lastCheck);
+		System.out.println("KoreanName : "  + koreaCheck);
+	
+	}
+
+}

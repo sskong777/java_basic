@@ -1,0 +1,20 @@
+package inner;
+
+
+class Outer1{
+	private int x = 100;
+	private static int y = 200;
+	
+	public void outerMethod1() {
+		System.out.println("public 바깥클래스 메소드");
+	}
+	private +
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

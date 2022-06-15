@@ -1,0 +1,19 @@
+package api;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+
+		int a = Math.abs(-10);
+		//abs()메소드는 인자로 넘긴 데이터의 "절대값" 을 반환
+		System.out.println(a);
+		
+		int b = Math.max(1, 9);
+		// max() 메소드는 전달된 데이터 중 더 큰 수를 반환
+		System.out.println(b);
+		
+		int c = Math.min(1, 9);
+		System.out.println(c);
+	}
+
+}

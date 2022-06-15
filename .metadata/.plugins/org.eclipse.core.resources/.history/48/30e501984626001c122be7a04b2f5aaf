@@ -1,0 +1,68 @@
+package program2;
+
+import java.util.*;
+
+public class MemberServiceImpl implements MemberService {
+
+	private HashSet<Member> set;
+	private Scanner scan;
+	
+	public MemberServiceImpl() {
+		set = new HashSet<Member>();
+		scan  = new Scanner(System.in);
+	}
+	@Override
+	public void viewAll() {
+		//전체회원목록 출력
+		Iterator<Member> setIter = set.iterator();
+		while(setIter.hasNext()) {
+			setIter.next().disp();
+		}
+	}
+	
+	@Override
+	public void view() {
+		//이름을 입력받아 회원의 나이와 전화번호 출력
+		System.out.print("회원이름 : " );
+		String name = scan.next();
+		
+		Iterator<Member> setIter = set.iterator();
+		while(setIter.hasNext()) {
+			if(name == setIter.next().getName()) {
+				System.out.println(setIter.next().getAge());
+				System.out.println(setIter.next().getPhoneNum());
+				
+			}
+		}
+	}
+	
+	@Override
+	public void insert() {
+		//이름 나이 전화번호를 입력받아 회원등록
+		System.out.print("이름 : ");
+		String name = scan.next();
+		System.out.print("나이 : ");
+		int age = scan.nextInt();
+		System.out.print("전화번호 : ");
+		String phoneNum = scan.next();
+		
+		Member member = new Member(name,age,phoneNum);
+		set.add(member);
+	}
+	
+	@Override
+	public void edit() {
+		//이름을 입력받아 회원의 나이와 전화번호 수정
+		
+	}
+	
+	@Override
+	public void delete() {
+		//이름을 입력받아 회원을 삭제
+	}
+		
+		
+		
+
+}
+

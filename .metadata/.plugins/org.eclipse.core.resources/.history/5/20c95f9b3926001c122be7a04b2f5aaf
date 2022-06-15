@@ -1,0 +1,40 @@
+package set;
+
+import java.util.*;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+
+		// Set : 데이터를 중복 저장하지 않는다
+		// 데이터의 저장 순서를 유지하지 않는다
+		
+		Set<String> set = new HashSet<>();
+		
+		set.add(new String("홍길동"));
+		//원칙 : new 연산자를 이용해서 객체를 넣는다
+		
+		set.add("이순신");
+		set.add("홍길동");
+		set.add("성춘향");
+		set.add("이몽룡");
+		
+		System.out.println("set의 크기 : " + set.size());
+		
+		Iterator<String> setIter = set.iterator();
+		
+		while(setIter.hasNext()) {	//요소가 있는지 확인 후 있으면 true 없으면 false
+			System.out.println(setIter.next());
+			
+		}
+		System.out.println();
+		
+		set.remove("홍길동");
+		
+		System.out.println("set의 크기 : " + set.size());
+
+		
+		
+	}
+
+}

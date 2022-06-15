@@ -1,0 +1,30 @@
+package generic;
+
+class Box {
+	
+	private Object obj;
+	
+	public Object getObj() {
+		return obj;
+	}
+	
+	public void setObj(Object obj) {
+		this.obj = obj;
+	}
+	
+}
+
+
+public class EX02 {
+
+	public static void main(String[] args) {
+
+		Box box = new Box();
+		
+		box.setObj("안녀하세요");
+		
+		box.getObj();
+		
+	}
+
+}

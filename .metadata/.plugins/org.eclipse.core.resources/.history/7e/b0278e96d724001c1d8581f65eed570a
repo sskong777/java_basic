@@ -1,0 +1,15 @@
+package exception;
+
+public class EX01 {
+
+	public static void main(String[] args) {
+
+		//system.out.println();
+		//컴파일 에러 : 컴파일 자체가 안됨
+		//자바 컴파일러 : 번역(구문체크)
+		
+		System.out.println(args[0]);
+		//
+	}
+
+}

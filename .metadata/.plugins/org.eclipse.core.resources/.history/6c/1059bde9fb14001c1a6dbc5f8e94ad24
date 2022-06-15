@@ -1,0 +1,17 @@
+package loop;
+
+public class EX12 {
+
+	public static void main(String[] args) {
+		int dan = 2;
+		int num = 1;
+		while (num < 10) {
+			while( dan < 10) {
+				System.out.printf("%d * %d = %d\n",dan, num, dan * num);
+				num++;
+			}
+			dan++;
+		}
+	}
+
+}

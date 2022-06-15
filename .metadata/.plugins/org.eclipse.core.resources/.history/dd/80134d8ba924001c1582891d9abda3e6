@@ -1,0 +1,91 @@
+package random;
+
+import java.util.Scanner;
+
+public class Exex {
+
+public static void main(String[] args) {
+// 1 ~ 10 까지 무작위 숫자 맞추기게임
+
+// int[] randomNumber 배열을 만들어서
+// 1 ~ 10까지 숫자 중 무작위 숫자 3개를 뽑는다.
+// 내가 숫자를 1 ~ 10까지만 계속 입력받아 무작위 숫자
+// 3개를 몇번만에 맞추었는지 알아보자
+
+int[] randomNumber = new int[3];
+
+for(int i = 0; i < randomNumber.length; i++) {
+randomNumber[i] = (int)(Math.random()*10)+1;
+
+for(int j = 0; j < i; j++) { // i의 아랫수까지 반복
+if(randomNumber[i] == randomNumber[j]) {
+i--;
+break;
+}
+}
+
+}
+
+System.out.println("무작위 숫자 3개를 뽑았습니다.");
+
+Scanner scan = new Scanner(System.in);
+
+boolean[] answer = new boolean[3];
+// 입력받은 수를 하나씩 맞출때마다 true로 변환
+int count = 0; // 몇번만에 맞추었는지 확인하는 수
+int i = 0; // temp배열의 제어변수
+
+int[] temp = new int[10];
+// 내가 입력받은 수를 저장할 temp 배열
+
+Loop1 : while(true) { // while문의 이름지정
+
+System.out.println("숫자 1 ~ 10 까지 중 하나를 입력하세요");
+int myNumber = scan.nextInt();
+
+if(myNumber < 1 || myNumber > 10) { //조건검사
+System.out.println("잘못 입력 하셨습니다.");
+System.out.println("프로그램 종료합니다.");
+System.exit(0);
+}
+
+for(int j = 0; j < temp.length; j++) {
+if(temp[j] == myNumber) {
+// 전의수를 입력받아서 현재수와 비교 후 같은 값이면
+System.out.println("전과 같은수를 입력했습니다.");
+continue Loop1; // while문으로 다시 돌려보낸다.
+}
+}
+
+temp[i] = myNumber; // temp 배열에 나의 숫자를 넣는다.
+i++; //제어변수 1증가
+
+count++;
+
+for(int j = 0; j < randomNumber.length; j++) {
+
+if(myNumber == randomNumber[j]) { //나의 수와 랜덤수를 비교해서 같으면
+
+answer[j] = true; //논리연산자 배열중 하나를 true로 변경
+
+if(answer[0] == true && answer[1] == true && answer[2] == true) {
+System.out.println(count + "번 만에 숫자를 모두 맞추셨습니다.");
+
+for(int k = 0; k < randomNumber.length; k++) {
+System.out.println(k+1 + "번째 랜덤수 : " + randomNumber[k]);
+}
+
+System.exit(0);
+
+}
+
+}
+
+}
+
+}
+
+
+}
+
+}

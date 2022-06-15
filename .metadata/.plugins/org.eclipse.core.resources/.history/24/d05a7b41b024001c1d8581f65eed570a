@@ -1,0 +1,15 @@
+package api;
+
+import java.util.Date;
+
+public class EX07 {
+
+	public static void main(String[] args) {
+
+		Date now = new Date();
+		//현재 시스템의 시간을 객체를 만듬
+		//그 외는 잘 사용하지 않는다
+		System.out.println(now);
+	}
+
+}

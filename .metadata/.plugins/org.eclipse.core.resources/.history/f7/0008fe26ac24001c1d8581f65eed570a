@@ -1,0 +1,13 @@
+package api;
+
+public class EX05 {
+
+	public static void main(String[] args) {
+
+		int a = Math.abs(-10);
+		//abs()메소드는 인자로 넘긴 데이터의 절대값을 반환
+		System.out.println(a);
+		
+	}
+
+}
